@@ -1,0 +1,160 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url("./Imagenes/pokemong-bg-2.jpg") ;
+    background-size: cover;
+}
+
+.container{
+    border: 20px solid grey;
+    padding: 20px;
+    width: 40%;
+    height: 80%;
+    display: flex;
+    border-radius: 30px;
+    min-width: 100%;
+    background: url("./Imagenes/pokemon-bg.jpg") no-repeat;
+    background-size: cover;
+    overflow-y: scroll;
+}
+
+.pokemon-info{
+    height: 100%;
+    width: 50%;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.pokemon-image{
+    width:30% ;
+    max-width: 300px;
+    max-height: 300px;
+    min-width: 200px;
+    background-color: white;
+    border: solid 1px black;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.pokemon-list{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    overflow-y: scroll;
+    padding: 10px;
+    text-transform: uppercase;
+}
+
+.pokemon-list::-webkit-scrollbar{
+    width: 10px;
+}
+
+.pokemon-list::-webkit-scrollbar-thumb{
+    background-color: #999;
+    border-radius: 5px;
+}
+li{
+    list-style: none;
+}
+ul{
+    width: 100%;
+}
+.pokemon-list-names{
+    border: 1px solid black;
+    background-color: rgb(255, 255, 255);
+    margin: 5px;
+    border-radius: 10px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    user-select: none;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.pokemon-description{
+    background-color: white;
+    border: 1px solid black;
+    width: 50%;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+
+.pokemon-types{
+    margin: 10px;
+}
+
+
+.type-box{
+    border-radius: 10px;
+    padding: 8px;
+    margin: 5px;
+    
+}
+
+
+
+@media screen and (max-width: 600px) {
+    .pokemon-image {
+        width: 90%;
+        min-width: 100%;
+        max-width: 100%;
+        height: 50%;
+        object-fit: contain;
+    }
+
+    .pokemon-list-names{
+        margin: 2px;
+        height: 30px;
+        width: 100%;
+    }
+
+    .container{
+        padding: 5px 2px 2px 5px;
+        justify-content: space-between;
+
+    }
+    .pokemon-list{
+        width: 45%;
+    }
+    .pokemon-list::-webkit-scrollbar{
+        width: 5px;
+    }
+
+    .type-box{
+        padding: 4px;
+        margin: 4px;
+    }
+
+    .pokemon-description{
+        width: 100%;
+        margin: 20px 4px 20px 4px;
+        display: flex;
+        border-radius: 10px;
+        padding: 4px;
+    }
+
+    .pokemon-types{
+        margin: 3px;
+        display: flex;
+        flex-direction: row;
+    }
+}
+
